@@ -14,10 +14,10 @@ public class VirtualPetShelterApp {
 
     public static void main(String[] args) {
 
-        VirtualPet organicDog1 = new VirtualPet(" Tommy", " is a curious Siberian Husky.", 30, 30, 30, 30);
-        VirtualPet organicCat1 = new VirtualPet("Lillian", " is a fluffy Persian Cat.", 30, 30, 30, 30);
-        VirtualPet roboticDog1 = new VirtualPet(" Chuckie", " is a playful Chihuahua.", 30, 30, 30, 30);
-        VirtualPet roboticCat1 = new VirtualPet("Angelica", " is a mischievous Bengal Cat", 30, 30, 30, 30);
+        VirtualPet organicDog1 = new VirtualPet(" Tommy", " is a curious Siberian Husky.", 30, 30, 30);
+        VirtualPet organicCat1 = new VirtualPet("Lillian", " is a fluffy Persian Cat.", 30, 30, 30);
+        VirtualPet roboticDog1 = new VirtualPet(" Chuckie", " is a playful Chihuahua.", 30, 30, 30);
+        VirtualPet roboticCat1 = new VirtualPet("Angelica", " is a mischievous Bengal Cat", 30, 30, 30);
 
         VirtualPetShelter shelterPets = new VirtualPetShelter();
         shelterPets.addPet(organicDog1);
@@ -25,8 +25,8 @@ public class VirtualPetShelterApp {
         shelterPets.addPet(roboticDog1);
         shelterPets.addPet(roboticCat1);
 
-        System.out.println("Welcome and thank you for volunteering at The Furry Friends Virtual Pet Shelter!");
-        System.out.println("Let's meet the dogs you will be working with." + "\n");
+        System.out.println("Welcome to the Pawtna's for Life Virtual Pet Shelter!");
+        System.out.println("Let's meet the pets you will be working with. Notice we have both Organic and Robotic Pets." + "\n");
         int petCount = 1;
         for (VirtualPet petToDisplay : shelterPets.retrieveAllPets()) {
             System.out.println(petCount + ". " + petToDisplay.getName()  + petToDisplay.getDescription());
@@ -35,27 +35,30 @@ public class VirtualPetShelterApp {
 
         while (true) {
 
-            System.out.println("\n" + "This is the status of our furry friends:");
-            System.out.println("\n" + " Hunger|Thirst|Boredom");
-            System.out.println("------------------------");
+            System.out.println("\n" + "Check out the status of our friends:");
+            System.out.println("\n" + " Name: Hunger| Thirst| Boredom| Health|Happiness");
+            System.out.println("--------------------------------------");
             for (VirtualPet petToDisplay : shelterPets.retrieveAllPets()) {
-                System.out.println(petToDisplay.getName() + ": " + petToDisplay.getHunger() + " | " + petToDisplay.getThirst()
-                        + " | " + petToDisplay.getBoredom());
+                System.out.println(petToDisplay.getName() + ": " + petToDisplay.getHunger() + petToDisplay.getThirst() + petToDisplay.getBoredom() + " | " + petToDisplay.getHealth()
+                        + " | " + petToDisplay.getHappiness());
             }
             System.out.println("\n" + "What would you like to do?");
-            System.out.println("1. Feed all the dogs");
-            System.out.println("2. Give water to all the dogs");
-            System.out.println("3. Play with a furry friend");
-            System.out.println("4. Adopt a companion");
-            System.out.println("5. Admit a pet");
-            System.out.println("6. Quit");
+            System.out.println("1. Feed pets");
+            System.out.println("2. Give water to pets");
+            System.out.println("3. Play with any pet");
+            System.out.println("4. Walk all the pets");
+            System.out.println("5. Clean pet cages");
+            System.out.println("6. Oil robot pets");
+            System.out.println("7. Adopt a companion");
+            System.out.println("8. Admit a new pet");
+            System.out.println("9. Quit");
 
             Scanner scanner = new Scanner(System.in);
             int userResponse = scanner.nextInt();
             scanner.nextLine();
 
             if (userResponse == 1) {
-                System.out.println("You selected to give all the dogs their favorite ice cream treats.");
+                System.out.println("You selected to feed the organic pets their favorite treats.");
                 shelterPets.actionFeedAllPets();
             } else if (userResponse == 2) {
                 System.out.println("You selected to give all the dogs some fresh iced water.");

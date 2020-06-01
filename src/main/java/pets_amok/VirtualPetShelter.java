@@ -27,16 +27,7 @@ public class VirtualPetShelter {
         petMap.remove(petName);
     }
 
-    public void actionFeedAllPets() {
-        for (VirtualPet petToFeed : petMap.values()) {
-            petToFeed.actionFeedAnimals();
-        }
-    }
-    public void actionGiveWaterToPets() {
-        for (VirtualPet petToWater : petMap.values()) {
-            petToWater.actionGiveWaterToAnimals();
-        }
-    }
+
     public void actionPlayWithPet(String petName) {
         petMap.get(petName);
     }
