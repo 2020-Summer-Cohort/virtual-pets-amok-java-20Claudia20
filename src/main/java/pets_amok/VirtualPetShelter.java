@@ -37,6 +37,12 @@ public class VirtualPetShelter {
             petToTick.tick();
     }
 
+    public void actionFeedAllPets() {
+    }
+
+    public void actionGiveWaterToPets() {
+
+    }
 }
 
 

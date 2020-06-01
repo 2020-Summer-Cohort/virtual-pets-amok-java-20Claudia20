@@ -24,8 +24,8 @@ public abstract class OrganicDog extends VirtualDogs implements OrganicPets {
 
 
     public void actionCleanCage(){
-        cageCleanliness += 20;}
-
+        cageClean
+    }
 
 
     @Override
