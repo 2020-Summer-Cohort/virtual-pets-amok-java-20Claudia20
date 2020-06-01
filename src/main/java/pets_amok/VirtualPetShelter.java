@@ -36,9 +36,8 @@ public class VirtualPetShelter {
         for (VirtualPet petToTick : petMap.values())
             petToTick.tick();
     }
+
 }
-
-
 
 
 

@@ -11,6 +11,7 @@ public abstract class VirtualDogs extends VirtualPet {
 
     }
 
-    public abstract void walkAllDogs();
+    public abstract void actionWalkAllDogs();
 
 }
+

@@ -1,7 +1,5 @@
 package pets_amok;
-/* done- create a model that allows for dogs and cats, either of which may be robotic
- done -introduce an attribute (instance variable) representing overall health that is updated
-       as a result of other attributes moving in a negative or positive direction, influencing happiness
+/*
      -introduce methods that allow for:
          oiling robotic pets
           walking dogs, decreasing the likelihood that organic dogs will soil their cages, while increasing happiness in all dogs
@@ -14,18 +12,22 @@ do not allow:
 
 
 public class VirtualPet {
-    //instance variables
-    private String name;
-    private String description;
-    private int boredom;
-    private int health;
-    private int happiness;
+    public static void main(String[] args) {
 
-    public VirtualPet(String name, String desc){
+    }
+    //instance variables
+    public String name;
+    public String description;
+    public int boredom;
+    public int health;
+    public int happiness;
+
+    public VirtualPet(String name, String desc) {
         this.name = name;
         this.description = desc;
     }
-    public VirtualPet(String name, String desc,  int boredom , int health, int happiness) {
+
+    public VirtualPet(String name, String desc, int boredom, int health, int happiness) {
         this.name = name;
         this.description = desc;
         this.boredom = boredom;
@@ -53,16 +55,40 @@ public class VirtualPet {
         return happiness;
     }
 
+   public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setBoredom(int boredom) {
+        this.boredom = boredom;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void setHappiness(int happiness) {
+        this.happiness = happiness;
+    }
+
     public void actionPlayWithAPet() {
         boredom -= 5;
+        happiness +=5;
     }
 
 
     public void tick() {
-        boredom = boredom +=2;
-        happiness = happiness +=2;
+        boredom += 2;
+        health =+2;
+        happiness += 2;
 
     }
+
+
 }
 
 
