@@ -34,7 +34,7 @@ public class VirtualPetShelterApp {
             for (VirtualPet petToDisplay : shelterPets.retrieveAllPets()) {
                 System.out.println(petToDisplay.getName() + ": " + petToDisplay.getBoredom() + petToDisplay.getHealth()
                         + petToDisplay.getHappiness() + petToDisplay.getHunger() + petToDisplay.getThirst()
-                        + petToDisplay.getCage() + petToDisplay.getOilMaintenance());
+                        + petToDisplay.getCageCleanliness() + petToDisplay.getOilMaintenance());
 
 
                 System.out.println("\n" + "What would you like to do?");
@@ -64,7 +64,9 @@ public class VirtualPetShelterApp {
                     System.out.println("You can take " + userPlayOption + " to the park.");
                     shelterPets.actionPlayWithPet(userPlayOption);
                 } else if (userResponse == 4){
-
+                    System.out.println("You selected to take a Dog for a walk. Who do you want to take,Tommy or Chuckie?");
+                    String userWalkOption = scanner.nextLine();
+                    shelterPets.actionWalkADog();
 
                 } else if (userResponse == 5) {
                     System.out.println(" ");

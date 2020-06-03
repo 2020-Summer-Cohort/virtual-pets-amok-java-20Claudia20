@@ -9,5 +9,4 @@ public interface OrganicPets {
     public void getThirst();
 
 
-
 }

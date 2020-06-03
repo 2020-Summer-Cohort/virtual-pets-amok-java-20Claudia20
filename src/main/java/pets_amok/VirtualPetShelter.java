@@ -32,6 +32,10 @@ public class VirtualPetShelter {
         petMap.get(petName);
     }
 
+    public void actionWalkADog() {
+
+    }
+
     public void tickAll() {
         for (VirtualPet petToTick : petMap.values())
             petToTick.tick();
@@ -43,6 +47,8 @@ public class VirtualPetShelter {
     public void actionGiveWaterToPets() {
 
     }
+
+
 }
 
 

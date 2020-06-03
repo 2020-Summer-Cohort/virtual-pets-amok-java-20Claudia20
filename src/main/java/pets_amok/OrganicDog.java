@@ -5,6 +5,7 @@ public abstract class OrganicDog extends VirtualDogs implements OrganicPets {
     public OrganicDog(String name, String desc) {
         super(name, desc);
     }
+
     //declare variables
     public int hunger;
     public int thirst;
@@ -18,13 +19,12 @@ public abstract class OrganicDog extends VirtualDogs implements OrganicPets {
         this.hunger = hunger;
         this.thirst = thirst;
         this.cageClean = cageClean;
-        this. eliminateWaste = eliminateWaste;
+        this.eliminateWaste = eliminateWaste;
     }
 
 
-
-    public void actionCleanCage(){
-        cageClean
+    public void actionCleanCage() {
+        cageClean = 20;
     }
 
 
@@ -34,15 +34,4 @@ public abstract class OrganicDog extends VirtualDogs implements OrganicPets {
 
     }
 
-    @Override
-    public void getHunger() {
-
-    }
-
-    @Override
-    public void getThirst() {
-
-    }
 }
-
-

@@ -16,11 +16,17 @@ public class VirtualPet {
 
     }
     //instance variables
-    public String name;
-    public String description;
-    public int boredom;
-    public int health;
-    public int happiness;
+    String name;
+    String description;
+    int boredom;
+    int health;
+    int happiness;
+    int hunger;
+    int thirst;
+    int cageCleanliness;
+    int oilMaintenance;
+
+
 
     public VirtualPet(String name, String desc) {
         this.name = name;
@@ -55,7 +61,20 @@ public class VirtualPet {
         return happiness;
     }
 
-   public void setName(String name) {
+    public int getHunger() {
+        return hunger;}
+
+    public int getThirst() {
+        return thirst;
+    }
+    public int getCageCleanliness() {
+        return cageCleanliness;
+    }
+    public int getOilMaintenance() {
+        return oilMaintenance;
+    }
+
+  /* public void setName(String name) {
         this.name = name;
     }
 
@@ -74,7 +93,7 @@ public class VirtualPet {
     public void setHappiness(int happiness) {
         this.happiness = happiness;
     }
-
+*/
     public void actionPlayWithAPet() {
         boredom -= 5;
         happiness +=5;
@@ -85,6 +104,7 @@ public class VirtualPet {
         boredom += 2;
         health =+2;
         happiness += 2;
+
 
     }
 
