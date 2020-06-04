@@ -1,6 +1,6 @@
 package pets_amok;
 
-import org.junit.jupiter.api.BeforeEach;
+/*import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collection;
@@ -17,7 +17,7 @@ public class VirtualPetShelterTest {
         return a collection of pets
      */
 
-        private VirtualPet testPet;
+  /*      private VirtualPet testPet;
         private VirtualPetShelter underTest;
         @BeforeEach
         void setUp() {
@@ -54,4 +54,5 @@ public class VirtualPetShelterTest {
             assertEquals(5, testPet.getTick());
         }
     }
-}
+*/
+

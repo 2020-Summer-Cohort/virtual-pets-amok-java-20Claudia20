@@ -42,7 +42,7 @@ public class VirtualPetShelterApp {
                 System.out.println("2. Give water to organic pets");
                 System.out.println("3. Play with a pet");
                 System.out.println("4. Take a pet for a walk");
-                System.out.println("5. Clean dog cages");
+                System.out.println("5. Clean dog cage");
                 System.out.println("6. Oil robotic pets");
                 System.out.println("7. Adopt a companion");
                 System.out.println("8. Admit a pet");
@@ -53,26 +53,27 @@ public class VirtualPetShelterApp {
                 scanner.nextLine();
 
                 if (userResponse == 1) {
-                    System.out.println("You selected to give all the dogs their favorite ice cream treats.");
-                    shelterPets.actionFeedAllPets();
+                    System.out.println("All the pets received their favorite ice cream treats.");
+                    OrganicPets.actionFeedOrganicPets();
                 } else if (userResponse == 2) {
-                    System.out.println("You selected to give all the dogs some fresh iced water.");
-                    shelterPets.actionGiveWaterToPets();
+                    System.out.println("You have given the pets some fresh iced water.");
+                    OrganicPets.actionWaterOrganicPets();
                 } else if (userResponse == 3) {
                     System.out.println("Type the name of the dog you would like to play with?");
                     String userPlayOption = scanner.nextLine();
-                    System.out.println("You can take " + userPlayOption + " to the park.");
+                    System.out.println(" You get to play with" + userPlayOption + "and their favorite toy.");
                     shelterPets.actionPlayWithPet(userPlayOption);
                 } else if (userResponse == 4){
                     System.out.println("You selected to take a Dog for a walk. Who do you want to take,Tommy or Chuckie?");
                     String userWalkOption = scanner.nextLine();
+                    System.out.println("You can take " + userWalkOption + " to the park.");
                     shelterPets.actionWalkADog();
-
                 } else if (userResponse == 5) {
-                    System.out.println(" ");
+                    System.out.println(" Thank you for volunteering to clean up the dogs cages.");
 
 
                 } else if (userResponse == 6){
+                    System.out.println( " It looks like you want to oil up the robotic pets. Let's get started.");
 
 
                 } else if (userResponse == 7) {
@@ -82,7 +83,7 @@ public class VirtualPetShelterApp {
                     shelterPets.adoptPet(userInput);
                     System.out.println("\n" + "Congrats! You adopted " + userInput + " as your new pet.");
                 } else if (userResponse == 8) {
-                    System.out.println("You have selected to bring in a dog. What's the name of our new furry friend?");
+                    System.out.println("Ah, it looks like you are bringing in a new dog. What's the name of our new furry friend?");
                     String userInput = scanner.nextLine();          // java is waiting for user input
                     System.out.println("How would you describe the dog using breed and attribute? (ex. Playful ChowChow");
                     String userDescription = scanner.nextLine();

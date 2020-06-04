@@ -12,26 +12,14 @@ do not allow:
 
 
 public class VirtualPet {
-    public static void main(String[] args) {
 
-    }
-    //instance variables
     String name;
     String description;
     int boredom;
     int health;
     int happiness;
-    int hunger;
-    int thirst;
-    int cageCleanliness;
-    int oilMaintenance;
-
-
-
-    public VirtualPet(String name, String desc) {
-        this.name = name;
-        this.description = desc;
-    }
+    //   int cageCleanliness;
+    //   int eliminateWaste;
 
     public VirtualPet(String name, String desc, int boredom, int health, int happiness) {
         this.name = name;
@@ -39,6 +27,15 @@ public class VirtualPet {
         this.boredom = boredom;
         this.health = health;
         this.happiness = happiness;
+        //     this.eliminateWaste = eliminateWaste;
+    }
+
+   public void feed(){
+
+    }
+
+    public void water(){
+
     }
 
     public String getName() {
@@ -61,53 +58,18 @@ public class VirtualPet {
         return happiness;
     }
 
-    public int getHunger() {
-        return hunger;}
-
-    public int getThirst() {
-        return thirst;
-    }
-    public int getCageCleanliness() {
-        return cageCleanliness;
-    }
-    public int getOilMaintenance() {
-        return oilMaintenance;
-    }
-
-  /* public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setBoredom(int boredom) {
-        this.boredom = boredom;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-    public void setHappiness(int happiness) {
-        this.happiness = happiness;
-    }
-*/
-    public void actionPlayWithAPet() {
+   public void actionPlayWithPet() {
         boredom -= 5;
-        happiness +=5;
+        happiness += 5;
     }
-
 
     public void tick() {
         boredom += 2;
-        health =+2;
+        health += 2;
         happiness += 2;
 
 
     }
-
 
 }
 

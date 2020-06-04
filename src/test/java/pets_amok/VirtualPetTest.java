@@ -1,5 +1,5 @@
 package pets_amok;
-
+/*
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class VirtualPetTest {
    //Trying out TDD along with Ben's Friday Workshop, need to finish
+
+ */
     /*pet should dot he following
      *have hunger
      *can eat to lower hunger
@@ -16,8 +18,8 @@ public class VirtualPetTest {
      *have a name on creation
      *should have a tick () to increase hunger and boredom.
      */
-        private VirtualPet underTest;
-        @BeforeEach
+   /*     private VirtualPet underTest;
+       @BeforeEach
         void setUp() {
             underTest = new VirtualPet("Bob");
         }
@@ -65,4 +67,4 @@ public class VirtualPetTest {
             assertEquals(25,boredom);
         }
     }
-}
+}*/

@@ -20,9 +20,11 @@ public class VirtualPetShelter {
     public Collection<VirtualPet> retrieveAllPets() {
         return petMap.values();
     }
+
     public void addPet(VirtualPet pet) {
         petMap.put(pet.getName(), pet);
     }
+
     public void adoptPet(String petName) {
         petMap.remove(petName);
     }
@@ -40,14 +42,6 @@ public class VirtualPetShelter {
         for (VirtualPet petToTick : petMap.values())
             petToTick.tick();
     }
-
-    public void actionFeedAllPets() {
-    }
-
-    public void actionGiveWaterToPets() {
-
-    }
-
 
 }
 
