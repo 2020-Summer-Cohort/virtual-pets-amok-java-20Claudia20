@@ -1,25 +1,19 @@
 package pets_amok;
-/*
-     -introduce methods that allow for:
-         oiling robotic pets
-          walking dogs, decreasing the likelihood that organic dogs will soil their cages, while increasing happiness in all dogs
-do not allow:
-   feeding/watering robotic pets
-   oiling organic pets
-   modify the tick method to return a value indicating the amount of waste a pet creates, which should contribute to either
-(optionally, create accessor methods to retrieve these values instead):amount of waste in an individual dog cage
-*/
 
+public abstract class VirtualPet {
 
-public class VirtualPet {
-
-    String name;
-    String description;
-    int boredom;
+    public String name;
+    private String description;
+    public int boredom;
     int health;
     int happiness;
     //   int cageCleanliness;
     //   int eliminateWaste;
+
+    public VirtualPet(String name, String description){
+        this.name = name;
+        this.description = description;
+    }
 
     public VirtualPet(String name, String desc, int boredom, int health, int happiness) {
         this.name = name;
@@ -30,13 +24,6 @@ public class VirtualPet {
         //     this.eliminateWaste = eliminateWaste;
     }
 
-   public void feed(){
-
-    }
-
-    public void water(){
-
-    }
 
     public String getName() {
         return name;
@@ -67,11 +54,14 @@ public class VirtualPet {
         boredom += 2;
         health += 2;
         happiness += 2;
-
-
     }
 
+
+    public abstract String retrieveStatus();
+
+
 }
+
 
 
 

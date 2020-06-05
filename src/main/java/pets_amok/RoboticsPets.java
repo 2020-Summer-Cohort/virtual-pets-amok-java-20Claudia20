@@ -1,6 +1,6 @@
 package pets_amok;
 
-public class RoboticsPets extends VirtualPet {
+public abstract class RoboticsPets extends VirtualPet {
 
     int oilMaintenance;
 

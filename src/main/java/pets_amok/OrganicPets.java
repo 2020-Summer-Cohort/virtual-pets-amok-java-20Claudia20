@@ -1,14 +1,25 @@
 package pets_amok;
 
-public class OrganicPets extends VirtualPet {
+public abstract class OrganicPets extends VirtualPet {
 
     int hunger;
     int thirst;
+
+    public OrganicPets(String name, String description) {
+        super(name, description);
+    }
 
     public OrganicPets(String name, String desc, int boredom, int health, int happiness, int hunger, int thirst) {
         super(name, desc, boredom, health, happiness);
         this.hunger = hunger;
         this.thirst = thirst;
+    }
+
+
+    public static void actionFeedOrganicPets() {
+    }
+
+    public static void actionWaterOrganicPets() {
     }
 
     public int getHunger() {
@@ -19,18 +30,10 @@ public class OrganicPets extends VirtualPet {
         return thirst;
     }
 
-    @Override
-    public void feed() {
 
-    }
 
-    @Override
-    public  void water(){
-
-    }
-
-    public static void actionFeedOrganicPets() {
-        for (VirtualPet petToFeed : petMap.values()) {
+ /*   public static void actionFeedOrganicPets() {
+        for (VirtualPet petToFeed : OrganicPets) {
             if (petToFeed instanceof OrganicPets) {
                 petToFeed.feed();
             }
@@ -38,19 +41,12 @@ public class OrganicPets extends VirtualPet {
     }
 
     public static void actionWaterOrganicPets() {
-        for (VirtualPet petToWater : petMap.values()) {
+        for (VirtualPet petToWater : OrganicPets.values()) {
             if (petToWater instanceof OrganicPets) {
                 petToWater.water();
             }
-        }
-    }
+        }*/
 }
 
-       /* public void actionFeedOrganicPets() {
-            hunger -= 5;
-        }
-        public void actionWaterOrganicPets () {
-            thirst -= 5;
-        }
-        */
+
 

@@ -21,6 +21,7 @@ public class VirtualPetShelter {
         return petMap.values();
     }
 
+
     public void addPet(VirtualPet pet) {
         petMap.put(pet.getName(), pet);
     }
