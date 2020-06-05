@@ -1,6 +1,6 @@
 package pets_amok;
 
-public abstract class RoboticsPets extends VirtualPet {
+public abstract class RoboticsPets extends VirtualPet  implements Oiling{
 
     int oilMaintenance;
 
@@ -9,14 +9,9 @@ public abstract class RoboticsPets extends VirtualPet {
         this.oilMaintenance = oilMaintenance;
     }
 
-//    public void oiling(){ }
-
-
-
     public int getOilMaintenance() {
         return oilMaintenance;
     }
-
 
     public void actionOilMaintenance(){
         oilMaintenance += 5;

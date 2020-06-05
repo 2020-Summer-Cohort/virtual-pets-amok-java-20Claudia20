@@ -10,7 +10,7 @@ public abstract class VirtualPet {
     //   int cageCleanliness;
     //   int eliminateWaste;
 
-    public VirtualPet(String name, String description){
+    public VirtualPet(String name, String description) {
         this.name = name;
         this.description = description;
     }
@@ -45,7 +45,7 @@ public abstract class VirtualPet {
         return happiness;
     }
 
-   public void actionPlayWithPet() {
+    public void actionPlayWithPet() {
         boredom -= 5;
         happiness += 5;
     }
@@ -59,8 +59,9 @@ public abstract class VirtualPet {
 
     public abstract String retrieveStatus();
 
-
 }
+
+
 
 
 
