@@ -1,6 +1,6 @@
 package pets_amok;
 
-public abstract class VirtualPet {
+public class VirtualPet {
 
     public String name;
     private String description;
@@ -57,7 +57,9 @@ public abstract class VirtualPet {
     }
 
 
-    public abstract String retrieveStatus();
+    public String retrieveStatus() {
+        return null;
+    }
 
 }
 

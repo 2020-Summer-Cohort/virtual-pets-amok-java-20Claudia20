@@ -9,6 +9,6 @@ public class RoboticDog extends RoboticsPets {
 
     @Override
     public String retrieveStatus() {
-        return name  + " " + boredom + " " + health + " " + happiness + " " + "---" + " " + "---" + " " + "---" + " " + oilMaintenance;
+        return name + " " + boredom + " " + health + " " + happiness + " " + "---" + " " + "---" + " " + "---" + " " + oilMaintenance;
     }
 }

@@ -8,9 +8,9 @@ public class VirtualPetShelterApp {
 
 
         OrganicDog pet1 = new OrganicDog("Tommie", " the a curious Siberian Husky.", 30, 30, 30, 30, 30);
-        OrganicCat pet2 = new OrganicCat("Bono", " the ferocious Australian Terrier", 30, 30, 30, 30, 30);
-        RoboticDog pet3 = new RoboticDog("Morty", " the messy St.Bernard", 30, 30, 30, 30);
-        RoboticCat pet4 = new RoboticCat("Leia", " the energetic Siberian Husky", 30, 30, 30, 30);
+        OrganicCat pet2 = new OrganicCat("Angelica", " the ferocious Australian Terrier.", 30, 30, 30, 30, 30);
+        RoboticDog pet3 = new RoboticDog("Chuckie", " the messy St.Bernard.", 30, 30, 30, 30);
+        RoboticCat pet4 = new RoboticCat("Lillian", " the energetic Siberian Husky.", 30, 30, 30, 30);
 
         VirtualPetShelter shelterPets = new VirtualPetShelter();
         shelterPets.addPet(pet1);
@@ -29,15 +29,15 @@ public class VirtualPetShelterApp {
 
         while (true) {
 
-        petStatus(shelterPets);
-        
+            petStatus(shelterPets);
+
             System.out.println("\n" + "What would you like to do?");
-            System.out.println("1. Feed all the organic pets");
-            System.out.println("2. Give water to organic pets");
+            System.out.println("1. Feed all organic pets");
+            System.out.println("2. Give water to all organic pets");
             System.out.println("3. Play with a pet");
-            System.out.println("4. Take a pet for a walk");
-            System.out.println("5. Clean dog cage");
-            System.out.println("6. Oil robotic pets");
+            System.out.println("4. Take a dog for a walk");
+            System.out.println("5. Clean the organic dog's cage");
+            System.out.println("6. Oil all robotic pets");
             System.out.println("7. Adopt a companion");
             System.out.println("8. Admit a pet");
             System.out.println("9. Quit");
@@ -47,36 +47,38 @@ public class VirtualPetShelterApp {
             scanner.nextLine();
 
             if (userResponse == 1) {
-                System.out.println("All the pets received their favorite ice cream treats.");
+                System.out.println("The organic pets are happily eating their favorite ice cream treats.");
                 FeedOrganicPets(shelterPets);
             } else if (userResponse == 2) {
-                System.out.println("You have given the pets some fresh iced water.");
-               WaterOrganicPets( shelterPets);
+                System.out.println("Organic pets are feeling refreshed from drinking the fresh iced water.");
+                WaterOrganicPets(shelterPets);
             } else if (userResponse == 3) {
-                System.out.println("Type the name of the dog you would like to play with?");
+                System.out.println("Type the name of the pet you would like to play with?");
                 String userPlayOption = scanner.nextLine();
                 System.out.println(" You get to play with " + userPlayOption + " and their favorite toy.");
                 shelterPets.actionPlayWithPet(userPlayOption);
             } else if (userResponse == 4) {
-                System.out.println("Who do you want to take for a walk,Tommy or Chuckie?");
+                System.out.println("What dog would you like to take for a walk,Tommy or Chuckie?");
                 String userWalkOption = scanner.nextLine();
                 System.out.println("You can take " + userWalkOption + " for a walk.");
                 shelterPets.actionWalkADog();
             } else if (userResponse == 5) {
                 System.out.println(" Thank you for volunteering to clean up the dogs cages.");
             } else if (userResponse == 6) {
-                System.out.println(" It looks like you want to oil up the robotic pets. Let's get started.");
+                System.out.println(" Thank you for oiling the robotic pets, they look happy and healthy.");
             } else if (userResponse == 7) {
                 System.out.println("You have selected to adopt a lifelong companion." + "\n" +
-                        "What furry friend would you like to take home?");
+                        "What friend would you like to take home?");
                 String userInput = scanner.nextLine();
                 shelterPets.adoptPet(userInput);
                 System.out.println("\n" + "Congrats! You adopted " + userInput + " as your new pet.");
             } else if (userResponse == 8) {
-                System.out.println("Ah, it looks like you are bringing in a new dog. What's the name and breed of our new furry friend?");
+                System.out.println("Ah, it looks like you are bringing in a new pet. What's the name of our new friend?");
                 String userInput = scanner.nextLine();
-                //   VirtualPet newPet = new VirtualPet(userInput);
-                //  shelterPets.addPet(newPet);
+                System.out.println("Is our new friend a cat or dog?");
+                String userDescription= scanner.nextLine();
+                VirtualPet newPet = new VirtualPet(userInput, userDescription);
+                shelterPets.addPet(newPet);
                 System.out.println("Thank you " + userInput + " is now part of our shelter!");
             } else if (userResponse == 9) {
                 System.out.println("Thank you for visiting The Pawtna For Life Shelter, have a good day.");
@@ -86,13 +88,13 @@ public class VirtualPetShelterApp {
             }
 
             shelterPets.tickAll();
-           
+
         }
     }
 
     private static void WaterOrganicPets(VirtualPetShelter shelterPets) {
         for (VirtualPet virtualPet : shelterPets.petMap.values()) {
-            if (virtualPet instanceof OrganicPets){
+            if (virtualPet instanceof OrganicPets) {
                 ((OrganicPets) virtualPet).feed();
             }
         }
@@ -106,10 +108,11 @@ public class VirtualPetShelterApp {
 
         }
     }
-   public static void petStatus(VirtualPetShelter petShelter) {
+
+    public static void petStatus(VirtualPetShelter petShelter) {
         System.out.println("This is the current status of our friends:");
-        System.out.println(" Name| Boredom|Health|Happiness|Hunger |Thirst|Cage|Oil Level");
-        System.out.println("-----|--------|------|---------|-------|------|----|---------");
+        System.out.println(" Name|Boredom|Health|Happiness|Hunger|Thirst|Cage|Oil Level");
+        System.out.println("-----|-------|------|---------|------|------|----|---------");
         for (VirtualPet petToDisplay : petShelter.retrieveAllPets()) {
             System.out.println(petToDisplay.retrieveStatus());
         }
