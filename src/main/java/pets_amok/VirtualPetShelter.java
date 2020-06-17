@@ -38,6 +38,15 @@ public class VirtualPetShelter {
         }
     }
 
+    protected static void FeedOrganicPets(VirtualPetShelter shelterPets) {
+        for (VirtualPet virtualPet : shelterPets.petMap.values()) {
+            if (virtualPet instanceof OrganicPets) {
+                ((OrganicPets) virtualPet).feed();
+            }
+
+        }
+    }
+
     protected static void oilRoboticPets(VirtualPetShelter shelterPets) {
         for (VirtualPet virtualPet : shelterPets.petMap.values()){
             if ( virtualPet instanceof RoboticsPets) {
@@ -45,6 +54,16 @@ public class VirtualPetShelter {
             }
         }
     }
+
+    public static void petStatus(VirtualPetShelter petShelter) {
+        System.out.println("This is the current status of our friends:");
+        System.out.println(" Name|Boredom|Health|Happiness|Hunger|Thirst|Cage|Oil Level");
+        System.out.println("-----|-------|------|---------|------|------|----|---------");
+        for (VirtualPet petToDisplay : petShelter.retrieveAllPets()) {
+            System.out.println(petToDisplay.retrieveStatus());
+        }
+    }
+
     public void tickAll() {
         for (VirtualPet petToTick : petMap.values())
             petToTick.tick();
