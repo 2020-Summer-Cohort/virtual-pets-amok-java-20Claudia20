@@ -10,10 +10,10 @@ public class VirtualPet {
     //   int cageCleanliness;
     //   int eliminateWaste;
 
-    public VirtualPet(String name, String description) {
-        this.name = name;
-        this.description = description;
-    }
+//    public VirtualPet(String name, String description) {
+//        this.name = name;
+//        this.description = description;
+//    }
 
     public VirtualPet(String name, String desc, int boredom, int health, int happiness) {
         this.name = name;

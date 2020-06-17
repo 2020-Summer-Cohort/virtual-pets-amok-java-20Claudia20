@@ -14,24 +14,37 @@ public class VirtualPetShelter {
     }
 
 
+    public void actionPlayWithPet(String petName) {
+        petMap.get(petName);
+    }
+
+    public void actionWalkADog() {
+
+    }
+
     public void addPet(VirtualPet pet) {
-        petMap.put(pet.getName(), pet);
+      petMap.put(pet.getName(), pet);
     }
 
     public void adoptPet(String petName) {
         petMap.remove(petName);
     }
 
-
-    public void actionPlayWithPet(String petName) {
-        petMap.get(petName);
+    protected static void WaterOrganicPets(VirtualPetShelter shelterPets) {
+        for (VirtualPet virtualPet : shelterPets.petMap.values()) {
+            if (virtualPet instanceof OrganicPets) {
+                ((OrganicPets) virtualPet).feed();
+            }
+        }
     }
 
-
-    public void actionWalkADog() {
-
+    protected static void oilRoboticPets(VirtualPetShelter shelterPets) {
+        for (VirtualPet virtualPet : shelterPets.petMap.values()){
+            if ( virtualPet instanceof RoboticsPets) {
+                ((RoboticsPets) virtualPet).oilMaintenance();
+            }
+        }
     }
-
     public void tickAll() {
         for (VirtualPet petToTick : petMap.values())
             petToTick.tick();

@@ -2,6 +2,9 @@ package pets_amok;
 
 import java.util.Scanner;
 
+import static pets_amok.VirtualPetShelter.WaterOrganicPets;
+import static pets_amok.VirtualPetShelter.oilRoboticPets;
+
 public class VirtualPetShelterApp {
 
     public static void main(String[] args) {
@@ -66,6 +69,7 @@ public class VirtualPetShelterApp {
                 System.out.println(" Thank you for volunteering to clean up the dogs cages.");
             } else if (userResponse == 6) {
                 System.out.println(" Thank you for oiling the robotic pets, they look happy and healthy.");
+                oilRoboticPets(shelterPets);
             } else if (userResponse == 7) {
                 System.out.println("You have selected to adopt a lifelong companion." + "\n" +
                         "What friend would you like to take home?");
@@ -77,8 +81,8 @@ public class VirtualPetShelterApp {
                 String userInput = scanner.nextLine();
                 System.out.println("Is our new friend a cat or dog?");
                 String userDescription= scanner.nextLine();
-                VirtualPet newPet = new VirtualPet(userInput, userDescription);
-                shelterPets.addPet(newPet);
+//                VirtualPet newPet = new VirtualPet(userInput, userDescription);
+               shelterPets.addPet();
                 System.out.println("Thank you " + userInput + " is now part of our shelter!");
             } else if (userResponse == 9) {
                 System.out.println("Thank you for visiting The Pawtna For Life Shelter, have a good day.");
@@ -92,13 +96,21 @@ public class VirtualPetShelterApp {
         }
     }
 
-    private static void WaterOrganicPets(VirtualPetShelter shelterPets) {
-        for (VirtualPet virtualPet : shelterPets.petMap.values()) {
-            if (virtualPet instanceof OrganicPets) {
-                ((OrganicPets) virtualPet).feed();
-            }
-        }
-    }
+//    private static void oilRoboticPets(VirtualPetShelter shelterPets) {
+//        for (VirtualPet virtualPet : shelterPets.petMap.values()){
+//            if ( virtualPet instanceof RoboticsPets) {
+//                ((RoboticsPets) virtualPet).oilMaintenance();
+//            }
+//        }
+//    }
+
+//    private static void WaterOrganicPets(VirtualPetShelter shelterPets) {
+//        for (VirtualPet virtualPet : shelterPets.petMap.values()) {
+//            if (virtualPet instanceof OrganicPets) {
+//                ((OrganicPets) virtualPet).feed();
+//            }
+//        }
+//    }
 
     private static void FeedOrganicPets(VirtualPetShelter shelterPets) {
         for (VirtualPet virtualPet : shelterPets.petMap.values()) {
