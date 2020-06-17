@@ -58,7 +58,7 @@ public class VirtualPet {
 
 
     public String retrieveStatus() {
-        return null;
+        return name;
     }
 
 }

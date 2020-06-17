@@ -81,9 +81,18 @@ public class VirtualPetShelterApp {
                 String userInput = scanner.nextLine();
                 System.out.println("Is our new friend a cat or dog?");
                 String userDescription= scanner.nextLine();
-//                VirtualPet newPet = new VirtualPet(userInput, userDescription);
-               shelterPets.addPet();
+               VirtualPet newPet = new VirtualPet(userInput,userDescription,30, 30,30);
+               shelterPets.addPet(newPet);
                 System.out.println("Thank you " + userInput + " is now part of our shelter!");
+
+                /* else if (userResponse == 5) {
+                System.out.println("You have selected to bring in a dog. What's the name of our new furry friend?");
+                String userInput = scanner.nextLine();          // java is waiting for user input
+                System.out.println("How would you describe the dog? (ex.breed and attributes)");
+                String userDescription = scanner.nextLine();
+                VirtualPet newPet = new VirtualPet(userInput, userDescription);
+                shelterPets.addPet(newPet);
+                System.out.println("Thank you " + userInput + " is now part of our shelter!"); */
             } else if (userResponse == 9) {
                 System.out.println("Thank you for visiting The Pawtna For Life Shelter, have a good day.");
                 break;
