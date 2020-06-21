@@ -46,9 +46,9 @@ public class VirtualPet {
     }
 
     public void tick() {
-        boredom += 2;
-        health += 2;
-        happiness += 2;
+//        boredom += 2;
+//        health += 2;
+//        happiness += 2;
     }
 
 
