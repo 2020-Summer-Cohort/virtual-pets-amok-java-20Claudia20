@@ -8,17 +8,9 @@ public class OrganicCat extends OrganicPets {
 
     @Override
     public String retrieveStatus() {
-        return name + " " + boredom + " " + health + " " + happiness + " " + hunger + " " + thirst + " " + "---" + " " + "---" + " " + "---";
+        return name + " " + boredom + " |  " + health + "  |  " + happiness + "     | " + hunger + "   | " + thirst
+                + "   | " + "---" + "| " + "---";
 
     }
 
-    @Override
-    public void feed() {
-
-    }
-
-    @Override
-    public void water() {
-
-    }
 }

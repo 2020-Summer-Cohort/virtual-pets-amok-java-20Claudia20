@@ -1,6 +1,6 @@
 package pets_amok;
 
-public  class RoboticDog extends RoboticsPets implements Oiling{
+public  class RoboticDog extends RoboticsPets{
 
     public RoboticDog(String name, String desc, int boredom, int health, int happiness, int oilMaintenance) {
         super(name, desc, boredom, health, happiness, oilMaintenance);
@@ -9,7 +9,8 @@ public  class RoboticDog extends RoboticsPets implements Oiling{
 
     @Override
     public String retrieveStatus() {
-        return name + " " + boredom + " " + health + " " + happiness + " " + "---" + " " + "---" + " " + "---" + " " + oilMaintenance;
+        return name + " " + boredom + "  |  " + health + "  |  " +  happiness + "     | " + "---" + "  | " + "---" +
+                "  | " + "---" + "|  " +oilMaintenance;
     }
 
     @Override

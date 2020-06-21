@@ -1,6 +1,6 @@
 package pets_amok;
 
-public abstract class RoboticsPets extends VirtualPet implements Oiling {
+public abstract class RoboticsPets extends VirtualPet {
 
     int oilMaintenance;
 
@@ -13,19 +13,27 @@ public abstract class RoboticsPets extends VirtualPet implements Oiling {
         return oilMaintenance;
     }
 
-    public void actionOilMaintenance() {
-        oilMaintenance += 5;
-        health += 5;
+    public void oilMaintenance(){
+
+}
+    public static void oilRoboticPets(VirtualPetShelter shelterPets) {
+        for (VirtualPet virtualPet : shelterPets.petMap.values()){
+            if ( virtualPet instanceof RoboticsPets) {
+                ((RoboticsPets) virtualPet).oilMaintenance();
+            }
+        }
     }
+
+//    public void actionOilMaintenance() {
+//        oilMaintenance += 5;
+//        health += 5;
+//    }
+
 }
 
 
-//  public void actionCleanCage() {
-//    cageClean = 20;
-//}
-//    public int getCageCleanliness() {
-//  return cageCleanliness;
-//}
+
+
 
 
 

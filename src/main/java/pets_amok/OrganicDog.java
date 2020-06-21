@@ -8,18 +8,8 @@ public class OrganicDog extends OrganicPets implements Walking{
 
     @Override
     public String retrieveStatus() {
-        return name + " " + boredom  + "|" + health  + "|" + happiness  + "|" + hunger  + "|" + thirst + " " + "---" + " " + "---" + " " + "---";
+        return name + " " + boredom  + "   |  " + health  + "  |  " + happiness  + "     |  " + hunger  + " |  "
+                + thirst + " | " + "---" + "| " + "---";
     }
 
-    @Override
-    public void feed() {
-        hunger -= 5;
-        thirst += 2;
-    }
-
-
-    @Override
-    public void water() {
-
-    }
 }
