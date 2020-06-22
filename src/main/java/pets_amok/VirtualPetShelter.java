@@ -18,12 +18,17 @@ public class VirtualPetShelter {
         petMap.get(petName);
     }
 
+
     public void actionWalkADog() {
 
     }
 
+    public void actionCleanCage(){
+
+    }
+
     public void addPet(VirtualPet pet) {
-      petMap.put(pet.getName(), pet);
+        petMap.put(pet.getName(), pet);
     }
 
     public void adoptPet(String petName) {
@@ -44,6 +49,8 @@ public class VirtualPetShelter {
         }
     }
 }
+
+
 
 
 

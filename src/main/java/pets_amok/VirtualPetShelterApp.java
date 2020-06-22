@@ -12,7 +12,7 @@ public class VirtualPetShelterApp {
     public static void main(String[] args) {
 
 
-        OrganicDog pet1 = new OrganicDog("Tommie", " the a curious Siberian Husky.", 30, 30, 30, 30, 30);
+        OrganicDog pet1 = new OrganicDog("Tommie", " the a curious Siberian Husky.", 30, 30, 30, 30, 30, 30);
         OrganicCat pet2 = new OrganicCat("Angelica", " the ferocious Australian Terrier.", 30, 30, 30, 30, 30);
         RoboticDog pet3 = new RoboticDog("Chuckie", " the messy St.Bernard.", 30, 30, 30, 30);
         RoboticCat pet4 = new RoboticCat("Lillian", " the energetic Siberian Husky.", 30, 30, 30, 30);
@@ -68,6 +68,7 @@ public class VirtualPetShelterApp {
                 shelterPets.actionWalkADog();
             } else if (userResponse == 5) {
                 System.out.println(" Thank you for volunteering to clean up the dogs cages.");
+                shelterPets.actionCleanCage();
             } else if (userResponse == 6) {
                 System.out.println(" Thank you for oiling the robotic pets, they look happy and healthy.");
                 oilRoboticPets(shelterPets);

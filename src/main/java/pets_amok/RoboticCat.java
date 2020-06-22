@@ -6,10 +6,10 @@ public class RoboticCat extends RoboticsPets {
         super(name, desc, boredom, health, happiness, oilMaintenance);
     }
 
-    @Override
-    public String retrieveStatus() {
-        return name + " " + boredom + "  |  " + health + "  |  " + happiness + "     | " + "---" + "  |  " + "---" +
-                " | " + "---" + "| " + oilMaintenance;
-    }
+//    @Override
+//    public String retrieveStatus() {
+//        return name + " " + boredom + "  |  " + health + "  |  " + happiness + "     | " + "---" + "  |  " + "---" +
+//                " | " + "---" + "| " + oilMaintenance;
+//    }
 
 }

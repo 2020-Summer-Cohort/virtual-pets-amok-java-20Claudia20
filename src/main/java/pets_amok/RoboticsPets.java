@@ -13,21 +13,24 @@ public abstract class RoboticsPets extends VirtualPet {
         return oilMaintenance;
     }
 
-    public void oilMaintenance(){
+    public void oilMaintenance() {
+        oilMaintenance += 5;
+        health += 5;
+    }
 
-}
     public static void oilRoboticPets(VirtualPetShelter shelterPets) {
-        for (VirtualPet virtualPet : shelterPets.petMap.values()){
-            if ( virtualPet instanceof RoboticsPets) {
+        for (VirtualPet virtualPet : shelterPets.petMap.values()) {
+            if (virtualPet instanceof RoboticsPets) {
                 ((RoboticsPets) virtualPet).oilMaintenance();
             }
         }
     }
 
-//    public void actionOilMaintenance() {
-//        oilMaintenance += 5;
-//        health += 5;
-//    }
+    @Override
+    public String retrieveStatus() {
+        return name + " " + boredom + "  |  " + health + "  |  " + happiness + "     | " + "---" + "  |  " + "---" +
+                " | " + "---" + "| " + oilMaintenance;
+    }
 
 }
 

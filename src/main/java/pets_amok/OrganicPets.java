@@ -19,7 +19,14 @@ public abstract class OrganicPets extends VirtualPet {
         happiness +=3;
     }
 
-    protected static void WaterOrganicPets(VirtualPetShelter shelterPets) {
+//    @Override
+//    public void tick() {
+//        super.tick();
+//        thirst += 2;
+//        hunger +=2;
+//    }
+
+    public static void WaterOrganicPets(VirtualPetShelter shelterPets) {
         for (VirtualPet virtualPet : shelterPets.petMap.values()) {
             if (virtualPet instanceof OrganicPets) {
                 ((OrganicPets) virtualPet).water();
@@ -27,18 +34,13 @@ public abstract class OrganicPets extends VirtualPet {
         }
     }
 
-    protected static void FeedOrganicPets(VirtualPetShelter shelterPets) {
+    public static void FeedOrganicPets(VirtualPetShelter shelterPets) {
         for (VirtualPet virtualPet : shelterPets.petMap.values()) {
             if (virtualPet instanceof OrganicPets) {
                 ((OrganicPets) virtualPet).feed();
             }
         }
     }
-}
 
-//  public void actionCleanCage() {
-//    cageClean = 20;
-//}
-//    public int getCageCleanliness() {
-//  return cageCleanliness;
-//}
+
+}
